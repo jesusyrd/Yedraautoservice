@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yedra Auto Services LLC | Quality Used OEM Auto Parts in South Florida</title>
+<meta name="description" content="Yedra Auto Services LLC in Oakland Park, FL offers quality used OEM auto parts for Honda, Toyota, Hyundai, Kia, Ford, Chevrolet and more. Ask about availability today.">
+<meta property="og:title" content="Yedra Auto Services LLC">
+<meta property="og:description" content="Quality used OEM automotive parts in South Florida.">
+<style>
+/* ===== 1. DESIGN TOKENS: change colors here ===== */
+:root{--black:#0e0e10;--char:#1c1d21;--char2:#26272c;--red:#b3121f;--red2:#d41a2a;--gray:#9ea3ab;--light:#f5f5f6;--white:#fff;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#222;line-height:1.6;background:var(--white)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:14px}
+.eyebrow{color:var(--red);font-weight:700;letter-spacing:.15em;font-size:.8rem;text-transform:uppercase;margin-bottom:10px;display:block}
+.lead{max-width:680px;color:#555;margin-bottom:40px}
+.dark{background:var(--char);color:var(--white)}.dark .lead{color:var(--gray)}
+.light{background:var(--light)}
+:focus-visible{outline:3px solid var(--red2);outline-offset:3px}
+/* Buttons */
+.btn{display:inline-block;padding:14px 28px;border-radius:6px;font-weight:700;border:2px solid var(--red);background:var(--red);color:#fff;cursor:pointer;font-size:1rem;transition:.25s}
+.btn:hover{background:var(--red2);border-color:var(--red2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(179,18,31,.35)}
+.btn.ghost{background:transparent;border-color:#fff}.btn.ghost:hover{background:#fff;color:var(--black);box-shadow:none}
+.btn.sm{padding:9px 16px;font-size:.9rem}
+/* ===== 2. HEADER ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.96);backdrop-filter:blur(8px);border-bottom:3px solid var(--red)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{color:#fff;font-weight:800;letter-spacing:.06em;font-size:1.1rem}.logo span{color:var(--red2)}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a{color:#ddd;font-size:.92rem;font-weight:600;transition:.2s}nav a:hover{color:var(--red2)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+/* ===== 3. HERO ===== */
+.hero{min-height:88vh;display:flex;align-items:center;color:#fff;background:linear-gradient(135deg,#0e0e10,#2a1114 70%,#1c1d21);position:relative;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.45}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,14,16,.92) 20%,rgba(14,14,16,.35))}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);max-width:760px;margin-bottom:20px}
+.hero h1 em{color:var(--red2);font-style:normal}
+.hero p{max-width:600px;color:#d6d6d9;font-size:1.1rem;margin-bottom:30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+/* Brands + advantages */
+.brands{background:var(--black);color:#fff;padding:40px 0}
+.brand-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 36px;color:var(--gray);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.95rem}
+.adv{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:30px;text-align:center}
+.adv div{border-top:2px solid var(--red);padding-top:12px;font-size:.92rem;color:#ccc}
+/* ===== 4. ABOUT ===== */
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.about ul{list-style:none;margin-top:18px}
+.about li{padding:8px 0 8px 28px;position:relative;border-bottom:1px solid #e3e3e6}
+.about li::before{content:"";position:absolute;left:0;top:17px;width:12px;height:12px;background:var(--red);border-radius:2px}
+.imgbox{border-radius:var(--r);overflow:hidden;min-height:320px;background:linear-gradient(135deg,var(--char2),var(--black));box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.imgbox img{width:100%;height:100%;min-height:320px;object-fit:cover}
+/* ===== 5. CARDS (parts + vehicles) ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.18)}
+.thumb{height:170px;overflow:hidden;background:linear-gradient(135deg,var(--char2),#3a1a1e);display:flex;align-items:center;justify-content:center;color:#777;font-weight:700;text-align:center;padding:10px}
+.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .thumb img{transform:scale(1.08)}
+.card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.15rem}.card p{font-size:.92rem;color:#555;flex:1}
+.vcard{position:relative;border-radius:var(--r);overflow:hidden;height:220px;background:linear-gradient(135deg,var(--char2),#3a1a1e);color:#fff;display:flex;align-items:flex-end;transition:.3s}
+.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.vcard::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.85))}
+.vcard:hover img{transform:scale(1.1)}
+.vcard div{position:relative;z-index:2;padding:16px}.vcard small{color:#ddd}
+.note{margin-top:30px;padding:16px 20px;border-left:4px solid var(--red);background:#fff;font-size:.9rem;color:#444;border-radius:0 6px 6px 0}
+.dark .note{background:var(--char2);color:#ccc}
+/* Why choose us */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.why div{background:var(--char2);padding:28px;border-radius:var(--r);border-top:3px solid var(--red);transition:.3s}
+.why div:hover{transform:translateY(-5px)}
+.why h3{margin-bottom:8px;font-size:1.2rem}.why p{color:var(--gray);font-size:.95rem}
+/* ===== 6. CONTACT ===== */
+.contact{display:grid;grid-template-columns:1fr 1.3fr;gap:36px}
+.loc{background:var(--char);color:#fff;padding:30px;border-radius:var(--r);align-self:start}
+.loc h3{margin-bottom:10px}.loc p{color:#ccc;margin-bottom:18px}.loc .btn{margin:0 8px 10px 0}
+form{background:#fff;padding:30px;border-radius:var(--r);box-shadow:0 6px 24px rgba(0,0,0,.1);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:5px}.f.full,form .btn,#status{grid-column:1/-1}
+label{font-weight:600;font-size:.88rem}
+input,textarea{padding:12px;border:1.5px solid #ccc;border-radius:6px;font:inherit}
+input:focus,textarea:focus{border-color:var(--red);outline:none}
+.err{color:var(--red2);font-size:.8rem;min-height:1em}
+input.bad,textarea.bad{border-color:var(--red2)}
+#status{font-weight:600}
+.hp{display:none}
+/* ===== 7. FOOTER ===== */
+footer{background:var(--black);color:#aaa;padding:60px 0 24px;font-size:.92rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:30px}
+footer h4{color:#fff;margin-bottom:12px}footer li{list-style:none;margin-bottom:6px}footer a:hover{color:var(--red2)}
+.legal{border-top:1px solid #333;margin-top:36px;padding-top:20px;font-size:.8rem}
+/* Scroll-reveal animation */
+.reveal{opacity:0;transform:translateY(26px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+/* ===== 8. RESPONSIVE ===== */
+@media(max-width:860px){
+ .burger{display:block}
+ nav ul{position:absolute;top:70px;left:0;right:0;background:var(--black);flex-direction:column;padding:20px;gap:18px;display:none}
+ nav ul.open{display:flex}
+ .about,.contact,.fgrid{grid-template-columns:1fr}
+ form{grid-template-columns:1fr}section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#home" class="logo">YEDRA <span>AUTO</span> SERVICES</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  <nav aria-label="Main"><ul id="menu">
+   <li><a href="#about">About</a></li><li><a href="#parts">Our Parts</a></li>
+   <li><a href="#vehicles">Vehicles</a></li><li><a href="#why">Why Us</a></li>
+   <li><a class="btn sm" href="#contact" style="color:#fff">Contact</a></li>
+  </ul></nav>
+ </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+ <div class="bg" data-img="hero"></div>
+ <div class="wrap">
+  <h1>QUALITY OEM AUTO PARTS. <em>TRUSTED AUTOMOTIVE SERVICE.</em></h1>
+  <p>Your trusted source for quality used OEM automotive parts in South Florida. Find the components you need at competitive prices, backed by dependable customer service.</p>
+  <div class="btns"><a class="btn" href="#parts">Explore Our Parts</a><a class="btn ghost" href="#contact">Contact Us</a></div>
+ </div>
+</section>
+
+<div class="brands"><div class="wrap">
+ <div class="brand-row"><span>Honda</span><span>Toyota</span><span>Hyundai</span><span>Kia</span><span>Ford</span><span>Chevrolet</span><span>+ More</span></div>
+ <div class="adv"><div>Original manufacturer parts</div><div>Competitive pricing</div><div>Clear communication</div><div>Local South Florida business</div></div>
+</div></div>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap about">
+ <div class="reveal">
+  <span class="eyebrow">About Us</span>
+  <h2>Driven by Quality. Built on Trust.</h2>
+  <p>Yedra Auto Services LLC is a South Florida automotive business committed to helping customers find reliable parts at competitive prices. We source original components from a range of vehicles and work directly with customers to match them with what they need.</p>
+  <ul>
+   <li>Experience with automotive sales and operations</li>
+   <li>Quality used OEM automotive parts</li>
+   <li>Customer-focused service</li>
+   <li>Knowledge of automotive components</li>
+   <li>Professional and transparent communication</li>
+   <li>Local South Florida operations</li>
+  </ul>
+ </div>
+ <div class="imgbox reveal"><img data-img="about" alt="Automotive parts and vehicle work" loading="lazy"></div>
+</div></section>
+
+<!-- PARTS -->
+<section id="parts" class="light"><div class="wrap">
+ <span class="eyebrow">Inventory</span><h2>Our Parts</h2>
+ <p class="lead">Browse the categories we work with. Tell us the vehicle and the part, and we will let you know what is available.</p>
+ <div class="grid" id="partsGrid"></div>
+ <p class="note"><strong>Please note:</strong> Inventory changes frequently, and availability must be confirmed before purchase. Customers are responsible for verifying exact vehicle and part compatibility before buying. Images shown are illustrative and do not represent current stock.</p>
+</div></section>
+
+<!-- VEHICLES -->
+<section id="vehicles" class="dark"><div class="wrap">
+ <span class="eyebrow">Vehicles</span><h2>Vehicles We Work With</h2>
+ <p class="lead">Examples of the makes and models we commonly handle. These are vehicle types we work with, not vehicles currently for sale.</p>
+ <div class="grid" id="vehGrid"></div>
+</div></section>
+
+<!-- WHY -->
+<section id="why" style="background:var(--black);color:#fff"><div class="wrap">
+ <span class="eyebrow">Why Choose Us</span><h2>What You Can Expect</h2><p class="lead" style="color:var(--gray)">A straightforward approach to finding the right part.</p>
+ <div class="why">
+  <div class="reveal"><h3>Quality OEM Components</h3><p>Original manufacturer parts sourced from vehicles.</p></div>
+  <div class="reveal"><h3>Competitive Pricing</h3><p>Practical alternatives to purchasing brand-new replacement parts.</p></div>
+  <div class="reveal"><h3>Automotive Knowledge</h3><p>Experience identifying automotive components and helping customers locate the right parts.</p></div>
+  <div class="reveal"><h3>Customer-Focused Service</h3><p>Clear communication and helpful assistance throughout the purchasing process.</p></div>
+ </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+ <span class="eyebrow">Contact</span><h2>Ask About a Part</h2>
+ <p class="lead">Send us the vehicle and the part you need. We will follow up to confirm availability.</p>
+ <div class="contact">
+  <div class="loc reveal">
+   <h3>Yedra Auto Services LLC</h3>
+   <p>4038 NE 5th Ave<br>Oakland Park, FL 33334</p>
+   <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=4038+NE+5th+Ave,+Oakland+Park,+FL+33334">Get Directions</a>
+   <a class="btn ghost" id="wa" href="#contact">WhatsApp</a>
+   <p id="waNote" style="font-size:.85rem;margin:0"></p>
+  </div>
+
+  <!-- Netlify Forms: data-netlify + hidden form-name input + honeypot -->
+  <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" novalidate>
+   <input type="hidden" name="form-name" value="contact">
+   <p class="hp"><label>Leave blank <input name="bot-field"></label></p>
+   <div class="f"><label for="name">Name *</label><input id="name" name="name" autocomplete="name" required><span class="err"></span></div>
+   <div class="f"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required><span class="err"></span></div>
+   <div class="f"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"><span class="err"></span></div>
+   <div class="f"><label for="vehicle">Vehicle Year/Make/Model *</label><input id="vehicle" name="vehicle" placeholder="e.g. 2016 Honda CR-V" required><span class="err"></span></div>
+   <div class="f full"><label for="part">Part Needed *</label><input id="part" name="part" placeholder="e.g. Front bumper" required><span class="err"></span></div>
+   <div class="f full"><label for="message">Message</label><textarea id="message" name="message" rows="4"></textarea></div>
+   <button class="btn" type="submit">Contact Us</button>
+   <div id="status" role="status" aria-live="polite"></div>
+  </form>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><h4>Yedra Auto Services LLC</h4><p>Quality used OEM automotive parts and dependable service in South Florida.</p></div>
+  <div><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#parts">Our Parts</a></li><li><a href="#vehicles">Vehicles</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  <div><h4>Parts</h4><ul><li>Bumpers</li><li>Doors &amp; Body Panels</li><li>Lights</li><li>Suspension</li><li>Wheels &amp; Interior</li></ul></div>
+  <div><h4>Location</h4><p>4038 NE 5th Ave<br>Oakland Park, FL 33334</p></div>
+ </div>
+ <p class="legal">&copy; 2026 Yedra Auto Services LLC. All rights reserved. Part availability, pricing, and compatibility must be confirmed before purchase. Brand names are used only to describe vehicle compatibility; Yedra Auto Services LLC is not affiliated with or endorsed by any vehicle manufacturer.</p>
+</div></footer>
+
+<script>
+/* ===== SETTINGS YOU CAN EDIT ===== */
+// Add your real number later, digits only with country code, e.g. "15551234567". Leave "" until you have one.
+const WHATSAPP_NUMBER = "";
+
+// Image URLs (Unsplash). If one fails to load, the dark gradient box with a label shows instead.
+// To use your own photos, put them in an /images folder and change these, e.g. "images/bumper.jpg".
+const U = id => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=70`;
+const IMG = {
+ hero: U("photo-1492144534655-ae79c964c9d7"),
+ about: U("photo-1486262715619-67b85e0b08d3")
+};
+// Part categories: [title, description, image URL]
+const PARTS = [
+ ["Front & Rear Bumpers","OEM bumper covers and related components for many makes and models.",""],
+ ["Doors & Body Panels","Doors, fenders, hoods and other exterior body panels.",""],
+ ["Headlights & Taillights","Original lighting assemblies for front and rear.",""],
+ ["Suspension Components","Control arms, struts and related suspension parts.",""],
+ ["Wheels & Rims","OEM wheels and rims, subject to availability.",""],
+ ["Interior Components","Seats, trim, consoles and other interior parts.",""],
+ ["Engine & Mechanical Parts","Mechanical and engine-related components.",""],
+ ["Other OEM Parts","Do not see what you need? Ask us and we will help look.",""]
+];
+// Vehicle examples: [model, make, image URL]
+const VEHICLES = [
+ ["Honda CR-V","Honda",""],["Honda Accord","Honda",""],["Hyundai Tucson","Hyundai",""],
+ ["Kia Sportage","Kia",""],["Ford F-150","Ford",""],["Chevrolet Tahoe","Chevrolet",""]
+];
+
+/* ===== BUILD CARDS ===== */
+// Creates an <img>; on error it removes itself so the gradient + label shows.
+function pic(src,alt){
+ if(!src) return alt;
+ const i=new Image(); i.alt=alt; i.loading="lazy"; i.src=src;
+ i.onerror=()=>{i.replaceWith(document.createTextNode(alt))}; return i;
+}
+const pg=document.getElementById("partsGrid");
+PARTS.forEach(([t,d,src])=>{
+ const c=document.createElement("article"); c.className="card reveal";
+ c.innerHTML=`<div class="thumb"></div><div class="body"><h3>${t}</h3><p>${d}</p><a class="btn sm" href="#contact" data-part="${t}">Ask About Availability</a></div>`;
+ c.querySelector(".thumb").append(pic(src,t)); pg.append(c);
+});
+// Clicking "Ask About Availability" pre-fills the Part Needed field
+pg.addEventListener("click",e=>{const a=e.target.closest("[data-part]"); if(a) document.getElementById("part").value=a.dataset.part;});
+const vg=document.getElementById("vehGrid");
+VEHICLES.forEach(([m,mk,src])=>{
+ const v=document.createElement("div"); v.className="vcard reveal";
+ v.innerHTML=`<div><strong>${m}</strong><br><small>${mk}</small></div>`;
+ if(src){const i=pic(src,m); if(i instanceof Element){i.className="";v.prepend(i)}}
+ vg.append(v);
+});
+// Hero + About background images with graceful fallback
+document.querySelector(".hero .bg").style.backgroundImage=`url("${IMG.hero}")`;
+const ab=document.querySelector("[data-img=about]"); ab.src=IMG.about; ab.onerror=()=>ab.remove();
+
+/* ===== MOBILE MENU ===== */
+const burger=document.getElementById("burger"), menu=document.getElementById("menu");
+burger.onclick=()=>{const o=menu.classList.toggle("open"); burger.setAttribute("aria-expanded",o);};
+menu.addEventListener("click",e=>{if(e.target.tagName==="A") menu.classList.remove("open")});
+
+/* ===== SCROLL REVEAL ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("show");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* ===== WHATSAPP ===== */
+const wa=document.getElementById("wa");
+if(WHATSAPP_NUMBER){wa.href=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello Yedra Auto Services, I am looking for a part.")}`;wa.target="_blank";wa.rel="noopener";}
+else{wa.addEventListener("click",e=>{e.preventDefault();document.getElementById("waNote").textContent="WhatsApp contact coming soon. Please use the form for now.";});}
+
+/* ===== FORM VALIDATION + NETLIFY SUBMIT ===== */
+const form=document.getElementById("contactForm"), status=document.getElementById("status");
+const rules={
+ name:v=>v.trim().length>=2||"Please enter your name.",
+ email:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||"Please enter a valid email.",
+ phone:v=>!v||/^[\d\s().+-]{7,}$/.test(v)||"Please enter a valid phone number.",
+ vehicle:v=>v.trim().length>=3||"Please enter the year, make and model.",
+ part:v=>v.trim().length>=2||"Please tell us which part you need."
+};
+function check(el){
+ const r=rules[el.name]; if(!r) return true;
+ const res=r(el.value), ok=res===true;
+ el.classList.toggle("bad",!ok); el.parentElement.querySelector(".err").textContent=ok?"":res; return ok;
+}
+form.querySelectorAll("input,textarea").forEach(el=>el.addEventListener("blur",()=>check(el)));
+form.addEventListener("submit",async e=>{
+ e.preventDefault(); status.style.color="";
+ const ok=[...form.elements].filter(el=>rules[el.name]).map(check).every(Boolean);
+ if(!ok){status.textContent="Please fix the highlighted fields.";status.style.color="#b3121f";return;}
+ // Netlify Forms only works once the site is hosted on Netlify.
+ if(location.protocol==="file:"){status.textContent="Form is valid. Submissions are not delivered when the file is opened locally. They will work after deploying to Netlify.";return;}
+ try{
+  const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(form)).toString()});
+  if(!r.ok) throw 0;
+  form.reset(); status.textContent="Thank you! We received your request and will follow up soon.";status.style.color="#1a7a3a";
+ }catch{status.textContent="Something went wrong. Please try again later.";status.style.color="#b3121f";}
+});
+</script>
+</body>
+</html>
